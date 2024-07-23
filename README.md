@@ -26,6 +26,8 @@ Combining these attributes into a single 'tags' column creates a comprehensive r
 
 The first approach involves preprocessing the dataset and vectorizing product attributes using `CountVectorizer`. Cosine similarity is then calculated between these vectors to find the most similar products. This method provides a basic understanding of similarity calculation using simple vector representations.
 
+![Basic Version](https://github.com/shamli1997/recommendation-system/blob/main/approach_1.png)
+
 #### Limitations:
 
 - Limited semantic understanding.
@@ -34,6 +36,8 @@ The first approach involves preprocessing the dataset and vectorizing product at
 ### 2. Enhanced Version Using Sentence Transformers
 
 The second approach improves upon the first by using the SentenceTransformer model 'all-mpnet-base-v2' to encode product tags into embeddings. This provides more accurate vector representations, and cosine similarity is calculated on these embeddings to identify similar products.
+
+![Enhanced Version](https://github.com/shamli1997/recommendation-system/blob/main/approach_2.png)
 
 #### Improvements:
 
@@ -47,6 +51,8 @@ The second approach improves upon the first by using the SentenceTransformer mod
 ### 3. Optimized Version Using Qdrant and Sentence Transformers
 
 The third approach optimizes similarity search by combining SentenceTransformer embeddings with Qdrant, a high-performance vector search engine. This allows for efficient and accurate nearest neighbor searches, making the system scalable for large datasets.
+
+![Optimized Version](https://github.com/shamli1997/recommendation-system/blob/main/approach_3.png)
 
 #### Improvements:
 
@@ -66,7 +72,7 @@ The third approach optimizes similarity search by combining SentenceTransformer 
 
    ```bash
    git clone https://github.com/shamli1997/recommendation-system.git
-   cd Recommendation_system
+   cd recommendation-system
    ```
 
 2. **Build Docker Images**
