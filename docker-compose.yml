@@ -10,6 +10,8 @@ services:
       - app-network
     volumes:
       - .:/app
+    env_file:
+      - .env
 
   streamlit:
     build: .
@@ -22,6 +24,8 @@ services:
       - app-network
     volumes:
       - .:/app
+    env_file:
+      - .env
 
 networks:
   app-network:
